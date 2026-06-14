@@ -1,0 +1,5 @@
+streaming/api_data/
+streaming/checkpoints/
+*.log
+*.tmp
+.DS_Store
