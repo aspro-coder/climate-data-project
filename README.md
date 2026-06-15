@@ -338,56 +338,87 @@ The streaming dashboards and analytics visualizations will then become available
 
 # 9. Comprehensive Analytics Catalog
 
-## A) Historical Batch Analytics
+## A) Historical Batch Analytics (1990–1999)
 
 ### Query 1
-Cities with the highest day-to-night temperature variations (1990–1999).
+
+Which cities had the highest average temperature variations between daytime and nighttime during the period 1990–1999?
 
 ### Query 2
-Monthly trends for temperature, humidity, and precipitation across selected cities.
+
+How did average temperature, humidity, and precipitation change monthly across cities during the period 1990–1999?
 
 ### Query 3
-Historical winter snow day distributions grouped by year.
+
+Which cities recorded the highest number of snow days during each winter season (December, January, February) within each year from 1990 to 1999?
 
 ### Query 4
-Frequency analysis of extreme temperature events below -10°C and above 40°C.
+
+Which cities experienced the highest number of extreme temperature days (below -10°C or above 40°C) during each year in the period 1990–1999?
 
 ### Query 5
-Seasonal comparison of atmospheric pressure and precipitation.
+
+How did average atmospheric pressure and precipitation vary between summer and winter months during the period 1990–1999?
 
 ### Query 6
-Seasonal wind speed analysis across different regions.
+
+How did average wind speeds change across cities during different seasons, including seasonal variations within each year from 1990 to 1999?
 
 ### Query 7
-Top 15 least sunny cities based on winter sunshine duration.
+
+Which cities had the lowest number of sunshine hours during winter seasons (December, January, February) for each year in the period 1990–1999?
 
 ### Bonus Query
-Long-term deviations in winter sunshine hours from the historical mean.
+
+How much did winter sunshine duration deviate from the long-term historical average for each city during the period 1990–1999?
 
 ### Query 8
-Rainfall statistics during high-temperature days above 30°C.
+
+Which cities recorded the highest precipitation levels during days with temperatures above 30°C, and what percentage of those hot days included rainfall, both yearly and overall during the period 1990–1999?
 
 ### Query 9
-Humidity fluctuation rankings analyzed yearly and across the entire dataset.
+
+Which 10 cities had the largest humidity variations between daytime and nighttime during the period 1990–1999, and how were they ranked yearly and overall across the entire observed period?
 
 ### Query 10
-Climate correlation analysis between rainfall and temperature indicators.
+
+Is there a correlation between precipitation levels and temperature across cities during the period 1990–1999? Do cities with lower precipitation generally experience higher temperatures compared to cities with higher precipitation levels?
 
 ---
 
 ## B) Real-Time Streaming Analytics
 
-### Job 1 — Abu Dhabi Thermal Divergence
-Compares real-time temperatures with historical monthly averages.
+### Job 1 — Abu Dhabi Temperature Monitoring
 
-### Job 2 — Bangkok Flash Flood Monitor
-Detects possible flood conditions using pressure and cloud coverage changes.
+What is the average temperature in Abu Dhabi during the last 60 minutes compared to the historical monthly average temperatures for the same month across each year from 1990 to 1999, and what are the absolute and percentage deviations?
 
-### Job 3 — Dubai Heatstroke Alert System
-Monitors humidity and heat conditions to detect dangerous heat index events.
+### Job 2 — Bangkok Flash Flood Risk Detection
 
-### Job 4 — Chicago Wind Velocity Variance
-Tracks sudden wind speed, gust, and direction changes.
+Has Bangkok experienced, during the last 90 minutes:
 
-### Job 5 — Beijing Barometric Profile
-Analyzes real-time atmospheric pressure deviations from historical June patterns.
+* a sudden increase in cloud coverage (more than 30% above the long-term monthly average for the same month during 1990–1999), and
+* a simultaneous atmospheric pressure drop (more than 3 hPa within the last 90 minutes and at least 2 hPa below the long-term monthly average),
+
+which could indicate a risk of intense rainfall and urban flooding?
+
+### Job 3 — Dubai Heatstroke Risk Monitoring
+
+Has Dubai experienced during the last 30 minutes:
+
+* a sudden humidity increase greater than 20%, or
+* humidity above 85% while temperatures exceed 35°C,
+
+which may indicate an increased risk of heatstroke conditions?
+
+### Job 4 — Chicago Wind Anomaly Detection
+
+Has Chicago experienced during the last 30 minutes:
+
+* a sudden increase in wind speed greater than 50%,
+* wind gust increases above 30%, or
+* wind direction changes greater than 45°?
+
+### Job 5 — Beijing Atmospheric Pressure Monitoring
+
+What is the atmospheric pressure in Beijing during the last 60 minutes compared to historical monthly average pressure values for June across each year from 1990 to 1999, and what are the absolute and percentage deviations?
+
