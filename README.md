@@ -35,7 +35,7 @@ All services are containerized and managed using **Docker Compose**.
 
 ## Architecture Diagram
 
-![Project Architecture](asvsp_kt33/architecture_diagram.png)
+![Project Architecture](architecture_diagram.png)
 
 ---
 
