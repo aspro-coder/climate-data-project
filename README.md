@@ -1,6 +1,6 @@
 # Big Data Project for Historical and Real-Time Weather Analysis
 
-A complete Big Data architecture for historical batch analytics and real-time weather stream processing using:
+A Big Data pipeline for historical batch analytics and real-time weather stream processing using:
 
 - Apache Spark
 - Hadoop HDFS
@@ -73,7 +73,7 @@ work/
 
 ## B) Real-Time Streaming Dataset
 
-The streaming layer uses a curated OpenWeatherMap JSON dataset that simulates live sensor telemetry.
+The streaming layer uses a prepared OpenWeatherMap JSON dataset that simulates live sensor telemetry.
 
 ### Location
 
@@ -118,7 +118,7 @@ Main orchestration script responsible for coordinating both the batch and stream
 
 Features:
 
-- Strict batch error handling using `set -e`
+- Automatic pipeline termination on batch errors using `set -e`
 - Automatic transition from batch to streaming mode
 - Interactive streaming console support
 
@@ -139,7 +139,7 @@ Pipeline stages:
 
 ### `run_realtime_pipeline.sh`
 
-Interactive menu for launching real-time analytics jobs.
+Interactive menu for running real-time streaming jobs.
 
 Features:
 
@@ -201,7 +201,7 @@ Raw CSV data is:
 - Converted into optimized Parquet format
 - Stored inside the transformed data zone
 
-Target path:
+Target HDFS path:
 
 ```bash
 hdfs://namenode:9000/data/transformed_zone/transformed_weather_data
@@ -213,7 +213,7 @@ hdfs://namenode:9000/data/transformed_zone/transformed_weather_data
 
 The system executes 11 PySpark analytical jobs over the transformed Parquet datasets.
 
-Processed analytical results are written directly into PostgreSQL using JDBC.
+Analytical results are stored in PostgreSQL using JDBC.
 
 ### PostgreSQL Configuration
 
@@ -288,7 +288,7 @@ The `weather-producer` service continuously reads weather events from the API da
 
 ### Consumer Subsystem
 
-Streaming consumers:
+Streaming consumers perform the following tasks:
 
 - Read Kafka messages
 - Clean incoming events
@@ -332,11 +332,11 @@ realtime_*
 4. Select the timestamp field
 5. Save the Data View
 
-The streaming dashboards and analytics visualizations will then become available in Kibana.
+Streaming dashboards and visualizations will then be available in Kibana.
 
 ---
 
-# 9. Comprehensive Analytics Catalog
+# 9. Analytics Overview
 
 ## A) Historical Batch Analytics (1990–1999)
 
@@ -382,7 +382,7 @@ Which 10 cities had the largest humidity variations between daytime and nighttim
 
 ### Query 10
 
-Is there a correlation between precipitation levels and temperature across cities during the period 1990–1999? Do cities with lower precipitation generally experience higher temperatures compared to cities with higher precipitation levels?
+Is there a correlation between precipitation and temperature across cities during the period 1990–1999? Do cities with lower precipitation generally experience higher temperatures compared to cities with higher precipitation levels?
 
 ---
 
