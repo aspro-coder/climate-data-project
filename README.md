@@ -73,7 +73,7 @@ work/
 
 ## B) Real-Time Streaming Dataset
 
-The streaming layer uses a prepared OpenWeatherMap JSON dataset that simulates live sensor telemetry.
+The streaming layer uses a prepared OpenWeatherMap JSON dataset that simulates live weather telemetry events.
 
 ### Location
 
@@ -83,9 +83,13 @@ streaming/api_data/api_data.json
 
 ### Notes
 
-- Contains 255 JSON weather records
-- Automatically consumed by `weather_producer.py`
-- No manual preparation required
+- The original development dataset contained a significantly larger number of streaming records
+- A smaller sample dataset containing 255 JSON weather records is included in this repository for demonstration and testing purposes
+- The original dataset was collected using a custom Python script that periodically queried the OpenWeatherMap API every 10 minutes
+- A 10-minute collection interval was intentionally chosen because meteorological conditions typically do not change significantly at very high frequencies, while OpenWeatherMap updates observational data at similar time intervals depending on the location and station availability
+- The dataset is automatically consumed by `weather_producer.py`
+- No manual preparation is required
+- The reduced dataset version is provided to keep the repository lightweight and easy to run locally
 
 ---
 
